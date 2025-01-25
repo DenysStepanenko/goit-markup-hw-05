@@ -807,6 +807,19 @@ section {
    border-color: #4D5AE5;
 }
 
+.checkbox-container .visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   padding: 0;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   clip-path: inset(50%);
+   border: 0;
+   white-space: nowrap;
+}
+
 .checkbox-container {
    position: relative;
    margin-bottom: 24px;
@@ -817,7 +830,6 @@ section {
       align-items: center;
       gap: 6px;
       user-select: none;
-   position: relative;
    font-size: 12px;
    line-height: 1.17;
    letter-spacing: 0.04em;
@@ -826,11 +838,12 @@ section {
   
 }
 
-.mod-span-checkbox {
-   display: inline-flex;
+.checkbox-container .mod-checkbox,
+.checkbox-container .icon-checkbox
+ {
+   display:inline-flex;
    align-items: center;
    justify-content:center;
-   
    width: 16px;
    height: 16px;
    border: 1px solid rgba(46, 47, 66, 0.4);
@@ -841,24 +854,42 @@ section {
      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .icon-checkbox {
-   fill: #F4F4FD;
-} */
 
-.visually-hidden:checked + .checkbox-label .mod-span-checkbox {
+
+.icon-checkbox {
+   fill: #F4F4FD;
+}
+
+.checkbox-container .visually-hidden:active+.checkbox-label .mod-checkbox {
+   fill: #F4F4FD;
+}
+
+ .checkbox-container .visually-hidden:checked+.checkbox-label .mod-checkbox {
    background-color: #404bbf;
    border: none;
+   
 }
 
-.visually-hidden:checked+.checkbox-label .icon-checkbox {
+.checkbox-container .visually-hidden:checked+.checkbox-label .mod-checkbox {
    fill: #F4F4FD;
 }
 
-.visually-hidden input[type="checkbox"] {
-   font-family: inherit;
-   line-height: inherit;
-}
 
+
+/* .checkbox-container .visually-hidden:focus + .checkbox-label .icon-checkbox {
+   outline-offset: 2px;
+   display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      outline: 1px solid rgba(46, 47, 66, 0.4);
+      border-radius: 2px;
+      fill: transparent;
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+         border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
 
 .agreement {
    color: #4d5ae5;
