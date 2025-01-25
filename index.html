@@ -435,7 +435,7 @@
             </button>
             <p class="modal-p">Leave your contacts and we will call you back</p>
 
-            <form name="feed-back-form" autocomplete="off">
+            <form class="modal-form" name="feed-back-form" autocomplete="off">
                 <div class="form-container">
                     <label class="modal-form-lable" for="user-name">
                         Name
@@ -477,7 +477,8 @@
                         placeholder="Text input"></textarea>
                 </div>
                 <div class="checkbox-container">
-                    <input class="visually-hidden" type="checkbox" id="user-privacy" name="user-privacy" value="true">
+                    <input class="visually-hidden" type="checkbox" id="user-privacy" name="user-privacy" value="true"
+                        required>
                     <label class="checkbox-label" for="user-privacy">
                         <span class="mod-span-checkbox">
                             <svg class="icon-checkbox" width="10" height="8">
