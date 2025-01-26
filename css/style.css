@@ -867,7 +867,7 @@ button {
 }
 
 .checkbox-container .visually-hidden:checked + .checkbox-label .span {
-   fill: transparent;
+   fill: #F4F4FD;
 }
 
 .agreement {
