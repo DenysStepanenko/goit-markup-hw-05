@@ -525,11 +525,11 @@ section {
 .footer-container {
    display: flex;
    align-items: baseline;
-   padding-left: 0;
-   padding-right: 0;
-}
+   /* padding-left: 0;
+   padding-right: 0;*/
+} 
 
-.footer-block {
+.footer-container .footer-block {
    max-width: 264px;
    margin-right: 120px;
 }
@@ -545,18 +545,20 @@ section {
    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.text-footer {
+.footer-container .text-footer {
    max-width: 264px;
    font-size: 16px;
    line-height: 1.5;
    font-weight: 400;
    color: #F4F4FD;
-   letter-spacing: 0.02em
+   letter-spacing: 0.02em;
 }
 
 .social-media {
+   width: 208px;
    text-align: left;
-   padding: 0;margin-right: 80px;
+   padding: 0;
+   margin-right: 80px;
 
 }
 
@@ -585,7 +587,7 @@ section {
    height: 40px;
 }
 
-.icon-bt {
+.icon-bt-footer {
    margin-left: 16px;
    fill: #f4f4fd;
 }
@@ -599,7 +601,6 @@ section {
    width: 264px;
    height: 40px;
    color:#FFFFFF;
-   margin-right: 24px;
    padding-left: 16px;
    background-color: transparent;
       border: 1px solid #FFFFFF;
@@ -624,7 +625,6 @@ section {
    color: #FFFFFF;
    background-color: #4D5AE5;
    border: none;
-   margin-left: 16px;
    border-radius: 4px;
    font-family: "Roboto", sans-serif;
    font-size: 16px;
@@ -638,7 +638,6 @@ section {
 
 .btn-subscribe .icon-bt-footer {
    vertical-align: middle;
-   margin-left: 16px;
 }
 
 .modal-overlay {
@@ -838,12 +837,13 @@ section {
   
 }
 
-.checkbox-container .mod-checkbox,
-.checkbox-container .icon-checkbox
- {
-   display:inline-flex;
+.checkbox-container .span {
+   display: inline-flex;
    align-items: center;
-   justify-content:center;
+   justify-content: center;
+}
+
+.checkbox-container .span {
    width: 16px;
    height: 16px;
    border: 1px solid rgba(46, 47, 66, 0.4);
@@ -860,26 +860,16 @@ section {
    fill: #F4F4FD;
 }
 
- .checkbox-container .visually-hidden:checked+.checkbox-label .mod-checkbox {
+ .checkbox-container .visually-hidden:checked + .checkbox-label .span {
    background-color: #404bbf;
    border: none;
    
 }
 
-.checkbox-container .visually-hidden:checked+.checkbox-label .mod-checkbox {
+.checkbox-container .visually-hidden:checked + .checkbox-label .span {
    fill: #F4F4FD;
 }
 
-
-
-.checkbox-container .visually-hidden:focus + .checkbox-label .icon-checkbox {
-   outline-offset: none;
-   outline: 1px solid #404bbf;
-}
-
-.checkbox-container .visually-hidden:focus+.checkbox-label .icon-checkbox {
-   fill: #F4F4FD;
-}
 .agreement {
    color: #4d5ae5;
 }
